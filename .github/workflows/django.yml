@@ -1,3 +1,8 @@
+ - name: Adding ENV variables from env.dev
+  run: |
+    cat ./env.dev >> $GITHUB_ENV
+
+
 name: Django CI
 
 on:
