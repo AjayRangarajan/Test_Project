@@ -6,7 +6,7 @@ class UserTestCase(TestCase):
 		User.objects.create_user(username="test_user", password="test_user_password")
 
 	def test_user_created(self):
-		print(os.environ.get('MSG'))
+		# print(os.environ.get('MSG'))
 		test_user = User.objects.get(username="test_user")
 		self.assertEqual(test_user.username, 'test_user')
 
