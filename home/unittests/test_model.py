@@ -9,3 +9,6 @@ class UserTestCase(TestCase):
 		print(os.environ.get('MSG'))
 		test_user = User.objects.get(username="test_user")
 		self.assertEqual(test_user.username, 'test_user')
+
+	def test_environment_variable(self):
+		self.assertEqual(os.environ.get('MSG'), "==================HELLO==================")
